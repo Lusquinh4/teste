@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulipas</title>
+    <link rel="stylesheet" href="tulipas-responsivel.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ff8dd3;
+        }
+        #interface {
+            max-width: 1000px;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+        .menu button {
+            flex: 1;
+            margin: 10px;
+            padding: 15px;
+            font-size: 16px;
+            background: #ffffff;
+            border: none;
+            color: #3b3b3b;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .menu button a {
+            color: rgb(20, 20, 20);
+            text-decoration: none;
+        }
+        .menu button:hover {
+            background: hsl(30, 6%, 94%);
+            transform: translateY(-5px);
+        }
+        .titulo {
+            text-align: center;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        .titulo img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .titulo h1 {
+            font-size: 2em;
+            margin: 10px 0;
+        }
+        .titulo h2 {
+            font-size: 1.5em;
+            color: #666;
+        }
+        #txt {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+        @media (max-width: 768px) {
+            .menu button {
+                font-size: 14px;
+                padding: 10px;
+            }
+            .titulo h1 {
+                font-size: 1.5em;
+            }
+            .titulo h2 {
+                font-size: 1.2em;
+            }
+            #txt h3 {
+                font-size: 1em;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="interface">
+        <nav class="menu">
+            <button id="i"><strong>Início</strong></button>
+            <button id="v"><strong>Ver mais</strong></button>
+            <button id="c"><strong>Cuidados</strong></button>
+            <button id="f"><a href="https://www.instagram.com/lucas_silva8687?igsh=cTRtdjV6cjV1cnYz" target="_blank"><strong>Fale conosco</strong></a></button>
+        </nav>
+
+        <figure class="titulo">
+            <img id="img-principal" src="https://files.catbox.moe/e0ix64.png" alt="Tulipas">
+            <figcaption>
+                <h1>Tulipas</h1>
+                <h2 id="subtitulo">A flor mais bela já descoberta</h2>
+            </figcaption>
+        </figure>
+
+        <div id="txt">
+            <h3>Tulipas são flores ornamentais do gênero de plantas liliáceas, formadas por uma única flor em cada haste, com folhas alongadas, apresentando seis pétalas ou na forma com pétalas dobradas, podendo atingir de 30 a 60 cm de altura. Tulipa teve seu nome originado da palavra turco-otomana “Tulbend”, que significa “turbante”, adereço usado polos homens turcos, por ter sua forma muito semelhante ao turbante. As tulipas são facilmente adaptadas ao clima frio e crescem a partir de um bulbo que produz floração única durante o ano, no início da primavera. Existem tulipas de diversas cores, resultado de sucessivos cruzamentos entre elas. A tulipa negra ainda apresenta tons de azul e vermelho muito densos.</h3>
+        </div>
+    </div>
+</body>
+</html>
